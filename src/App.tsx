@@ -1,9 +1,9 @@
-import './App.css';
-
+import "./App.css";
+import QuoteComponent from './components/QuoteComponent';
 function App() {
   return (
     <div className="App">
-
+      <QuoteComponent />    
     </div>
   );
 }
