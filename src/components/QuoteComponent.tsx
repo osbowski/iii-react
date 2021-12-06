@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import getRandomQuote from "../utils/getRandomQuote";
 
 const QuoteComponent = () => {
   interface quoteInterface {
@@ -20,7 +21,7 @@ const QuoteComponent = () => {
 
   const getLastQuote = () => {
     setQuote(lastQuote);
-    setLastQuote(undefined)
+    setLastQuote(undefined);
   };
 
   useEffect(() => {
@@ -41,7 +42,13 @@ const QuoteComponent = () => {
       )}
       <div>
         <button onClick={getNewQuote}>Get new quote</button>
-        <button className="outline" onClick={getLastQuote} disabled={lastQuote===undefined}>Back to last quote</button>
+        <button
+          className="outline"
+          onClick={getLastQuote}
+          disabled={lastQuote === undefined}
+        >
+          Back to last quote
+        </button>
       </div>
     </div>
   );
